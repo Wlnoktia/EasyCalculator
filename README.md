@@ -57,15 +57,13 @@ Aplikasi ini juga menyimpan riwayat perhitungan ke database lokal (SQLite) dan m
 
 | Nama | Tugas |
 |------|-------|
-| Wahyu | UI/UX Design (Membuat tampilan kalkulator dan history) |
-| Watmah | Pembuatan Kalkulasi dan Logika Event pada tombol |
-| Wulan Oktavia | Pembuatan Database Helper dan CRUD SQLite untuk Riwayat |
-| [Nama Ke-4] | Integrasi RecyclerView + Tombol Delete di Riwayat |
-
-*(Silakan ganti [Nama Ke-4] dengan nama temanmu yang keempat.)*
+| Watmah | UI/UX Design (Membuat tampilan kalkulator dan history) |
+| Wahyu wulan | Pembuatan Kalkulasi dan Logika Event pada tombol |
+| miranda | Pembuatan Database Helper dan CRUD SQLite untuk Riwayat |
+| niken | Integrasi RecyclerView + Tombol Delete di Riwayat |
 
 ## Link Repository
-> [Link Github kamu di sini]
+> https://github.com/Wlnoktia/EasyCalculator.git
 
 ## Link Trello Board (SCRUM Management)
-> [Link Trello kamu di sini]
+> https://wulanoktaviawahyu-1745597155870.atlassian.net/jira/software/projects/SCRUM/boards/1?sprintStarted=true&atlOrigin=eyJpIjoiM2ZiM2EzMTVmMmE4NDI2NGE0YTUwYjJjY2Y4Yjg5MjEiLCJwIjoiaiJ9
