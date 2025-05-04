@@ -1,7 +1,15 @@
-Berikut adalah **README GitHub versi storyboard** yang menjelaskan **Adapter dan fungsionalitas riwayat (history)** untuk **aplikasi kalkulator berbasis Java**. Template ini cocok untuk dimasukkan ke dalam file `README.md` repositori Anda di GitHub.
+# EasyCalculator - Aplikasi Mobile Kalkulator
 
----
+## Deskripsi Project
+EasyCalculator adalah aplikasi kalkulator sederhana berbasis Android, dibuat untuk menghitung operasi matematika dasar seperti penjumlahan, pengurangan, perkalian, dan pembagian.
+Aplikasi ini juga menyimpan riwayat perhitungan ke database lokal (SQLite) dan memungkinkan pengguna untuk melihat dan menghapus riwayat tersebut.
 
+## Fitur Utama
+- Kalkulator untuk operasi dasar.
+- Riwayat perhitungan disimpan secara otomatis.
+- Menghapus riwayat perhitungan satu per satu.
+- Desain antarmuka sederhana dan mudah digunakan.
+- 
 # 📱 Kalkulator Android – Adapter & Riwayat (Java)
 
 Aplikasi kalkulator ini tidak hanya menghitung ekspresi matematika, tapi juga **menyimpan dan menampilkan riwayat kalkulasi** secara real-time menggunakan `RecyclerView` dan `Adapter` dalam Java.
