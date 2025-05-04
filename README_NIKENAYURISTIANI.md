@@ -8,7 +8,7 @@ Aplikasi ini juga menyimpan riwayat perhitungan ke database lokal (SQLite) dan m
 - Kalkulator untuk operasi dasar.
 - Riwayat perhitungan disimpan secara otomatis.
 - Menghapus riwayat perhitungan satu per satu.
-- Desain antarmuka sederhana dan mudah digunakan.
+- Desain antarmuka sederhana dan mudah digunakan. 
 - 
 # 📱 Kalkulator Android – Adapter & Riwayat (Java)
 
