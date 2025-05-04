@@ -11,23 +11,122 @@ Aplikasi ini juga menyimpan riwayat perhitungan ke database lokal (SQLite) dan m
 - Menghapus riwayat perhitungan satu per satu.
 - Desain antarmuka sederhana dan mudah digunakan.
 
-## Storyboard Kalkulasi dan Logika Event
 
+## 📖 Storyboard Logika & Event
 
-### 1. Halaman Kalkulator (Calculator Screen)
-- Input ekspresi matematika.
-- Tampilkan hasil perhitungan.
-- Tombol angka, operator, clear, dan sama dengan.
-- Ikon untuk membuka halaman History.
+### 1. **Event: Pengguna Menekan Tombol**
 
-### 2. Halaman Riwayat (History Screen)
-- List RecyclerView untuk semua perhitungan sebelumnya.
-- Hapus riwayat satu per satu melalui tombol Delete.
+**Komponen:** `MaterialButton`
+**Listener:** `OnClickListener`
+**Logika Java:**
 
-### 3. Alur Penggunaan
-- Buka aplikasi → Masukkan ekspresi → Hitung hasil → Riwayat tersimpan → Lihat atau hapus riwayat.
+```java
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        expression += ((Button) v).getText().toString();
+        solutionTextView.setText(expression);
+    }
+});
+```
 
-## Wireframe (Sketsa Tampilan)
+📌 *Tujuan:* Menambahkan input ke ekspresi matematika dan menampilkannya ke `solutionTextView`.
+
+---
+
+### 2. **Event: Tombol Sama Dengan (=)**
+
+**Komponen:** `buttonEquals`
+**Listener:** `OnClickListener`
+**Logika Java:**
+
+```java
+buttonEquals.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        String result = evaluate(expression);
+        resultTextView.setText(result);
+        historyList.add(expression + " = " + result);
+        adapter.notifyDataSetChanged();
+    }
+});
+```
+
+📌 *Tujuan:* Mengevaluasi ekspresi dan menampilkan hasil pada `resultTextView`, serta menyimpan histori kalkulasi.
+
+---
+
+### 3. **Event: Tombol Clear (C)**
+
+**Komponen:** `buttonC`
+**Logika Java:**
+
+```java
+buttonC.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        expression = "";
+        solutionTextView.setText("");
+    }
+});
+```
+
+📌 *Tujuan:* Menghapus ekspresi saat ini tanpa menghapus hasil atau histori.
+
+---
+
+### 4. **Event: Tombol All Clear (AC)**
+
+**Komponen:** `buttonAC`
+**Logika Java:**
+
+```java
+buttonAC.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        expression = "";
+        resultTextView.setText("");
+        solutionTextView.setText("");
+        historyList.clear();
+        adapter.notifyDataSetChanged();
+    }
+});
+```
+
+📌 *Tujuan:* Menghapus ekspresi, hasil kalkulasi, dan seluruh histori perhitungan.
+
+---
+
+### 5. **Evaluasi Ekspresi (Parsing)**
+
+**Metode:** `evaluate(String expression)`
+**Contoh Java menggunakan ekspresi evaluator (misal: `exp4j`):**
+
+```java
+public String evaluate(String expr) {
+    try {
+        Expression expression = new ExpressionBuilder(expr).build();
+        double result = expression.evaluate();
+        return String.valueOf(result);
+    } catch (Exception e) {
+        return "Error";
+    }
+}
+```
+
+📌 *Tujuan:* Mengubah string ekspresi menjadi hasil kalkulasi numerik dengan aman.
+
+---
+
+## 🔄 Alur Singkat Logika Event
+
+```
+[Tombol ditekan] → Tambah ekspresi → Tampilkan ke layar
+[Tombol "=" ditekan] → Evaluasi ekspresi → Tampilkan hasil → Simpan ke histori
+[Tombol "C"] → Hapus ekspresi
+[Tombol "AC"] → Hapus ekspresi + hasil + histori
+```
+
 
 [ Calculator Screen ]
 +-------------------------------+
