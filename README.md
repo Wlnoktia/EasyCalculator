@@ -11,7 +11,8 @@ Aplikasi ini juga menyimpan riwayat perhitungan ke database lokal (SQLite) dan m
 - Menghapus riwayat perhitungan satu per satu.
 - Desain antarmuka sederhana dan mudah digunakan.
 
-## Storyboard
+## Storyboard Kalkulasi dan Logika Event
+
 
 ### 1. Halaman Kalkulator (Calculator Screen)
 - Input ekspresi matematika.
