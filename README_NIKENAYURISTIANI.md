@@ -160,5 +160,9 @@ adapter.notifyDataSetChanged();
     ↓
 [RecyclerView menampilkan hasil baru]
 ```
+Link Repository
+https://github.com/Wlnoktia/EasyCalculator.git
 
+Link Trello Board (SCRUM Management)
+https://wulanoktaviawahyu-1745597155870.atlassian.net/jira/software/projects/SCRUM/boards/1?sprintStarted=true&atlOrigin=eyJpIjoiM2ZiM2EzMTVmMmE4NDI2NGE0YTUwYjJjY2Y4Yjg5MjEiLCJwIjoiaiJ9
 ---
